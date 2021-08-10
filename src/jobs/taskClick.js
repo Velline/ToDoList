@@ -5,7 +5,11 @@ export function taskClick(e) {
   //Delete task
   if (item.classList[0] === "delete-btn") {
     const todo = item.parentElement;
-    todo.remove();
+    //Delete animation
+    todo.classList.add("deleteAnimation");
+    todo.addEventListener("transitionend", function () {
+      todo.remove();
+    });
   }
   //Mark task as completed
   else if (item.classList[0] === "completed-btn") {
