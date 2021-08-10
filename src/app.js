@@ -41,8 +41,6 @@ function addTodo(event) {
   }
 }
 
-taskClick();
-
 //Event listeners
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", taskClick);
